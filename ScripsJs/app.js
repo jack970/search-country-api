@@ -6,7 +6,7 @@ const renderData = (url) => {
         .then( data => {
             const html = data
                 .map(country => {
-                    return `<a href="detail.html?code=${country.alpha2Code}" id="card-country" class="card-wrapper">
+                    return `<a href="detail.html?code=${country.alpha2Code}" class="card-wrapper">
                                 <img src="${country.flag}" alt="${country.name}">
                                 <h1>${country.name}</h1>
                                 <p><span>Population:</span> ${formatNumber(country.population)}</p>

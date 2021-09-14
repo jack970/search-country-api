@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="var(--body-background)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="ScripsJs/app.js"></script>
+        <script src="ScripsJs/changeTheme.js"></script>
+        <link rel="stylesheet" href="index.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+        <title>REST Countries API</title>
+    </head>
+    <body>
+        <header class="wrapper-header">
+            <h1>Where in the World?</h1>
+            <div onclick="toggleTheme()" id="dark-mode-button">
+                <p>Dark Mode</p>
+            </div>
+        </header>
+        <div class="inputs">
+            <label>
+                <input type="text" id="myInput" placeholder="Search for a Country...">
+            </label>
+            <div class="select_wrap">
+                <ul class="default_option">
+                    <li>
+                        <div class="option">
+                            <p>Filter by Region</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="select_ul"></ul>
+            </div>
+        </div>
+        <main id="app"></main>
+    </body>
+</html>

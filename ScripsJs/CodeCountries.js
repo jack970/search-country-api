@@ -1,4 +1,4 @@
-const countryListAlpha3 = {
+export const countryListAlpha3 = {
     "AFG": "Afghanistan",
     "ALB": "Albania",
     "DZA": "Algeria",
@@ -250,9 +250,3 @@ const countryListAlpha3 = {
     "ZWE": "Zimbabwe",
     "ALA": "Åland Islands"
 };
-
-export const convertCode = (borderCountries) => {
-    return Array.from(borderCountries, country => {
-        return countryListAlpha3[country]
-    })
-}

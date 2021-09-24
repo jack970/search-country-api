@@ -1,7 +1,6 @@
 import doGet from "./request.js";
 import formatNumber from "./formatNumber.js";
-
-const domainURL = 'https://restcountries.com/v3'
+import { domainURL } from "./apiURL.js";
 
 const renderData = (url) => {
     doGet(url)
@@ -9,10 +8,10 @@ const renderData = (url) => {
             const html = data
                 .map(country => {
                     return `<a href="detail.html?code=${country.alpha2Code}" class="card-wrapper">
-                                <img src="${country.flag}" alt="${country.name}">
+                                <img src="${country.flags[0]}" alt="${country.name}">
                                 <h1>${country.name}</h1>
                                 <p><span>Population:</span> ${formatNumber(country.population)}</p>
-                                <p><span>Region:</span> ${country.region}</p>
+                                <p><span>Region:</span> ${country.continent}</p>
                                 <p><span>Capital:</span> ${country.capital}</p>
                             </a>` 
                 })
@@ -63,7 +62,7 @@ document.querySelector('.select_wrap').addEventListener('click', () => {
         o.addEventListener("click", () => {
             const region = o.querySelector("p").innerHTML
             selected.innerHTML = region
-            renderData(`${domainURL}/region/${region}`)
+            renderData(`${domainURL}/continent/${region}`)
         })
     })
 })

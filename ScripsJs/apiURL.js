@@ -1,0 +1,1 @@
+export const domainURL = 'https://restcountries.com/v2'

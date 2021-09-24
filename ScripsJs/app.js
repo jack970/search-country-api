@@ -1,6 +1,8 @@
 import doGet from "./request.js";
 import formatNumber from "./formatNumber.js";
 
+const domainURL = 'https://restcountries.com/v3'
+
 const renderData = (url) => {
     doGet(url)
         .then( data => {
@@ -20,7 +22,7 @@ const renderData = (url) => {
     )   .catch(console.error)
 }
 
-renderData("https://restcountries.eu/rest/v2/all")
+renderData(`${domainURL}/all`)
 
 const listOptions = ["Africa", "Americas", "Europe", "Asia", "Oceania"]
 
@@ -61,7 +63,7 @@ document.querySelector('.select_wrap').addEventListener('click', () => {
         o.addEventListener("click", () => {
             const region = o.querySelector("p").innerHTML
             selected.innerHTML = region
-            renderData(`https://restcountries.eu/rest/v2/region/${region}`)
+            renderData(`${domainURL}/region/${region}`)
         })
     })
 })

@@ -12,7 +12,7 @@ const renderData = (url) => {
                                 <h1>${country.name}</h1>
                                 <p><span>Population:</span> ${formatNumber(country.population)}</p>
                                 <p><span>Region:</span> ${country.continent}</p>
-                                <p><span>Capital:</span> ${country.capital}</p>
+                                <p><span>Capital:</span> ${country.capital ? country.capital : ""}</p>
                             </a>` 
                 })
                 .join("");

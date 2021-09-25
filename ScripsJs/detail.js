@@ -24,12 +24,12 @@ doGet(`${domainURL}/alpha/${params}`)
                             <p><span>Population:</span> ${formatNumber(data.population)}</p>
                             <p><span>Region:</span> ${data.continent}</p>
                             <p><span>Sub Region:</span> ${data.region}</p>
-                            <p><span>Capital:</span> ${data.capital}</p>
+                            <p><span>Capital:</span> ${data.capital ? data.capital : "Empty"}</p>
                         </div>
                         <div class="column">
                             <p><span>Top Level Domain:</span> ${data.topLevelDomain}</p>
-                            <p><span>Currencies:</span> ${data.currencies.map(coin => coin.name)}</p>
-                            <p><span>Languages:</span> ${data.languages.map(language => language.name).join(", ")}</p>
+                            <p><span>Currencies:</span> ${data.currencies ? data.currencies.map(coin => coin.name) : "Empty"}</p>
+                            <p><span>Languages:</span> ${data.languages ? data.languages.map(language => language.name).join(", ") : "Empty"}</p>
                         </div>               
                     </div>
                     <div class="border-countries">

@@ -71,8 +71,8 @@ span {
     bottom: 0;
     width: 20px;
     background-color: var(--text-color);
-    -webkit-mask: url(svg/moon-regular.svg) no-repeat center;
-    mask: url(svg/moon-regular.svg) no-repeat center;
+    -webkit-mask: url(../svg/moon-regular.svg) no-repeat center;
+    mask: url(../svg/moon-regular.svg) no-repeat center;
 }
 
 #dark-mode-button {
@@ -113,8 +113,8 @@ span {
     bottom: 0;
     width: 20px;
     background-color: var(--input-color);
-    -webkit-mask: url(svg/search-solid.svg) no-repeat center;
-    mask: url(svg/search-solid.svg) no-repeat center;
+    -webkit-mask: url(../svg/search-solid.svg) no-repeat center;
+    mask: url(../svg/search-solid.svg) no-repeat center;
 }
 
 .inputs input {
@@ -241,8 +241,8 @@ button {
     bottom: 0;
     width: 20px;
     background-color: var(--text-color);
-    -webkit-mask: url(svg/arrow-left-solid.svg) no-repeat center;
-    mask: url(svg/arrow-left-solid.svg) no-repeat center;
+    -webkit-mask: url(../svg/arrow-left-solid.svg) no-repeat center;
+    mask: url(../svg/arrow-left-solid.svg) no-repeat center;
 }
 
 #flag-image {

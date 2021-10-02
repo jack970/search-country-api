@@ -53,7 +53,7 @@ These functions check the value by Theme in Local Storage. If the value by Theme
 If Theme value in local storage is empty, the class in the tag will be empty.
 
 ```html
-<html lang="en" class="dark-mode">
+<html lang="en" class="">
 ```
 
 See below the code:
